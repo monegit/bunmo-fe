@@ -36,8 +36,18 @@ const ComponentName = (props: PropsWithChildren) => {
 
 ### 2. 모든 컴포넌트는 화살표 함수로 작성
 
+- `rface` code snippet 사용
+
 ```tsx
+// Good
 const ComponentName = (props: PropsType) => { ... }
+export default ComponentName;
+
+// Bad
+function ComponentName(props: PropsType) { ... }
+export default ComponentName;
+
+export function ComponentName(props: PropsType) { ... }
 ```
 
 <br/>
@@ -92,14 +102,14 @@ export { functionName1, functionName2 };
 
 # 브랜치 규칙
 
+- 작업 시작 전 `GitHub Project`에 등록된 이슈 번호 확인 후 브랜치 생성
+
 ```
 - `main` : 배포용 브랜치
 - `develop` : 개발용 브랜치 (default)
 - `feat/{IssueNumber}` : 기능 개발용 브랜치
 - `fix/{IssueNumber}` : 버그 수정용 브랜치
 ```
-
-- 작업 시작 전 `GitHub Project`에 등록된 이슈 번호 확인 후 브랜치 생성
 
 <br/>
 <br/>
